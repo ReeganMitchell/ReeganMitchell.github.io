@@ -15,9 +15,9 @@ export default {
   methods: {
     handleToggle1() {
       this.toggle1 = !this.toggle1;
-      this.canplayanim = window.getComputedStyle(document.querySelector("main")).getPropertyValue("flex-direction") == "row";
+      this.canplayanim = window.getComputedStyle(document.querySelector("main")!).getPropertyValue("flex-direction") == "row";
       this.$nextTick(() => {
-        if (this.toggle1 && !this.canplayanim) {document.getElementById('a').scrollIntoView({behavior: 'smooth'})}
+        if (this.toggle1 && !this.canplayanim) {document.getElementById('a')!.scrollIntoView({behavior: 'smooth'})}
       });
     }
   }
@@ -30,7 +30,7 @@ export default {
       <!-- <div class="intro">
         <button type="button" v-on:click="">Click Me!</button> 
       </div> -->
-      <Intro :class="{ moveleft: (this.toggle1 && this.canplayanim), moveright: (!this.toggle1 && this.canplayanim)}" @toggle1clicked="handleToggle1"/>
+      <Intro :class="{ moveleft: (toggle1 && canplayanim), moveright: (!toggle1 && canplayanim)}" @toggle1clicked="handleToggle1"/>
       <Transition>
         <div id="a" class="a" v-show="toggle1"></div>
       </Transition>
