@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import PixiApp from '../components/pixiApp/application.vue';
 
 export default {

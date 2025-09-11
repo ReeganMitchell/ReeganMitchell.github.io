@@ -1,8 +1,8 @@
 <template>
-  <div ref="stage"></div>
+  <div id="stage" ref="stage"></div>
 </template>
 
-<script>
+<script lang="ts">
   import * as PIXI from 'pixi.js';
 
   export default {
@@ -14,18 +14,21 @@
     mounted() {
       
       (async () => {
+
+        const stage = document.getElementById("stage");
+        const stageHeight = (stage.offsetWidth / 4) * 3;
+        
         
         await this.app.init({
-          // background: '#FFFFFF',
+          background: '#00FFFF',
           backgroundAlpha: 0,
-          resizeTo: HTMLElement,
-          width:  640,
-          height: 480,
+          width:  stage.offsetWidth,
+          height: stageHeight,
           antialias: true, 
           autoDensity: true 
         }); 
 
-        this.$refs.stage.appendChild(this.app.canvas);
+        (this.$refs.stage as any).appendChild(this.app.canvas);
 
         const texture = await PIXI.Assets.load('https://pixijs.com/assets/bunny.png');
         const bunny = new PIXI.Sprite(texture);

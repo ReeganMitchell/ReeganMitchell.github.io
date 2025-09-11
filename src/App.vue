@@ -1,5 +1,4 @@
 <script lang="ts">
-import { routerViewLocationKey } from 'vue-router';
 import PixiApp from './components/pixiApp/application.vue';
 
 export default {
@@ -29,6 +28,7 @@ export default {
 
       <!-- Main layout -->
       <div class="layout">
+        <div class="padding"></div>
         <div class="side-bar">
           <ul>
             <li>
@@ -54,8 +54,7 @@ export default {
               </transition>
             </router-view>
         </div>
-
-        <!-- <PixiApp/> -->
+        <div class="padding"></div>
       </div>
   </main>
 </template>
@@ -75,30 +74,43 @@ export default {
   .header {
     background-color: whitesmoke;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner-header {
+    max-width: 1920px;
+    width: 100%;
   }
 
   .layout {
-    max-width: 1024px;
+    max-width: 1044px;
     width: 100%;
     height: 1000px;
     display: flex;
-    align-items: stretch;
     flex-direction: row;
     margin: 10px;
   }
 
+  .padding {
+    width: 1%;
+  }
+
   .side-bar {
     background-color: whitesmoke;
-    border: 2px solid grey;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
     width: 20%;
+    min-width: fit-content;
     height: 100%;
-    flex-grow: 1;
   }
 
   .page-area {
     background-color: whitesmoke;
-    border: 2px solid grey;
-    width: 80%;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    width: 78%;
     height: 100%;
     margin-left: 1em;
   }
