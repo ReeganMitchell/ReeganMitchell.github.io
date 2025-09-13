@@ -1,22 +1,21 @@
 <script lang="ts">
-import PixiApp from '../components/pixiApp/application.vue';
+import PixiApp from '../components/pixiApp/application.vue'
 
 export default {
   components: {
-    'PixiApp': PixiApp
+    PixiApp: PixiApp
   },
-  methods: {
-  },
+  methods: {}
 }
 </script>
 
 <template>
   <div style="padding: 1em">
     <h2>HomeView</h2>
-    <PixiApp/>
+    <PixiApp />
   </div>
 </template>
 
 <style>
-@import "../style-common.css";
+@import '../style-common.css';
 </style>

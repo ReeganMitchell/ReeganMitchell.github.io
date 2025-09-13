@@ -6,15 +6,15 @@ import SimracingView from './Pages/simracing.vue'
 import ProjectsView from './Pages/projects.vue'
 
 const routes = [
-    { path: '/', component: HomeView },
-    { path: '/about', component: AboutView },
-    { path: '/simracing', component: SimracingView },
-    { path: '/projects', component: ProjectsView },
+  { path: '/', component: HomeView },
+  { path: '/about', component: AboutView },
+  { path: '/simracing', component: SimracingView },
+  { path: '/projects', component: ProjectsView }
 ]
 
 const router = createRouter({
-    history: createMemoryHistory(),
-    routes,
+  history: createMemoryHistory(),
+  routes
 })
 
 export default router
