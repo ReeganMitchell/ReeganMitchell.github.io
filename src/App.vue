@@ -1,30 +1,30 @@
 <script lang="ts">
-import PixiApp from './components/pixiApp/application.vue'
+import PixiApp from './components/pixiApp/application.vue';
 
 export default {
   components: {
     PixiApp: PixiApp
   },
   created() {
-    this.getTime()
-    setInterval(this.getTime, 5000)
+    this.getTime();
+    setInterval(this.getTime, 5000);
   },
   data() {
     return {
       timestamp: ''
-    }
+    };
   },
   methods: {
     getTime() {
-      const today = new Date()
-      const date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()
+      const today = new Date();
+      const date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
       const time =
-        today.getHours() + ':' + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes()
-      const dateTime = date + ' ' + time
-      this.timestamp = dateTime
+        today.getHours() + ':' + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+      const dateTime = date + ' ' + time;
+      this.timestamp = dateTime;
     }
   }
-}
+};
 </script>
 
 <template>
@@ -110,7 +110,7 @@ main {
 .layout {
   max-width: 1044px;
   width: 100%;
-  height: 1000px;
+  /* height: 1000px; */
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -136,6 +136,7 @@ main {
   width: 78%;
   height: 100%;
   margin-left: 1em;
+  transition: height 0.4s linear;
 }
 
 .fade-enter-active,

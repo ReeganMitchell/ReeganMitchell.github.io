@@ -1,16 +1,16 @@
 @font-face {
   font-family: Colmeak;
-  src: url(./assets/Colmeak.otf);
+  src: url(./assets/fonts/Colmeak.otf);
 }
 
 @font-face {
   font-family: Gunken;
-  src: url(./assets/Gunken.otf);
+  src: url(./assets/fonts/Gunken.otf);
 }
 
 @font-face {
   font-family: Darklinos;
-  src: url(./assets/DARKLINOS.ttf);
+  src: url(./assets/fonts/DARKLINOS.ttf);
 }
 
 h2 {

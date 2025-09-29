@@ -1,12 +1,12 @@
 <script lang="ts">
-import PixiApp from '../components/pixiApp/application.vue'
+import PixiApp from '../components/pixiApp/application.vue';
 
 export default {
   components: {
     PixiApp: PixiApp
   },
   methods: {}
-}
+};
 </script>
 
 <template>
